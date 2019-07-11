@@ -8,7 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Task1" />
         <module name="SpringXmlMaven" />
-        <module name="task1" />
+        <module name="springxmlmaven" />
       </profile>
     </annotationProcessing>
   </component>
