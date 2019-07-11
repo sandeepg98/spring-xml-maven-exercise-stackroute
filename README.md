@@ -13,6 +13,7 @@ The Main class looks up Movie bean via three ways to print out actor information
 1. Using XmlBeanFactory
 2. Using Spring 3.2 BeanDefinitionRegistry and BeanDefinitionReader
 3. Using ApplicationContext
+
 Create a spring-xml-maven-exercise-stackroute repo and push the code to master branch.
 
 -----------------------------------------------------------------------------------------------------------------------------
