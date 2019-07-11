@@ -2,14 +2,12 @@ package com.stackroute.domain;
 
 public class Movie {
 
-    Actor actor, actress;
+    Actor actor, actress, sidekick;
 
-    public void setActor(Actor actor) {
+    public Movie(Actor actor, Actor actress, Actor sidekick) {
         this.actor = actor;
-    }
-
-    public void setActress(Actor actress) {
         this.actress = actress;
+        this.sidekick = sidekick;
     }
 
     @Override
@@ -17,6 +15,7 @@ public class Movie {
         return "Movie{" +
                 "actor=" + actor +
                 ", actress=" + actress +
+                ", sidekick=" + sidekick +
                 '}';
     }
 }
