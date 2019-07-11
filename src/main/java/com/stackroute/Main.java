@@ -31,9 +31,12 @@ public class Main {
         Movie movie = context.getBean("movie", Movie.class);
         System.out.println(movie);
 
-        //Equality result of two movie beans
-        Movie movieA = context.getBean("movieA", Movie.class);
-        Movie movieB = context.getBean("movieB", Movie.class);
-        System.out.println(movieA==movieB);
+        Movie movie1 = context.getBean("movie1", Movie.class);
+        System.out.println(movie1);
+
+//        //Equality result of two movie beans
+//        Movie movieA = context.getBean("movieA", Movie.class);
+//        Movie movieB = context.getBean("movieB", Movie.class);
+//        System.out.println(movieA==movieB);
     }
 }

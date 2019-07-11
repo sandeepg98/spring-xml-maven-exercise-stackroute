@@ -24,16 +24,22 @@
         <constructor-arg name="age" value="45"></constructor-arg>
     </bean>
 
-    <bean id="movie" class="com.stackroute.domain.Movie">
-        <constructor-arg name="actor" ref="actor"></constructor-arg>
-        <constructor-arg name="actress" ref="actress"></constructor-arg>
-        <constructor-arg name="sidekick" ref="sidekick"></constructor-arg>
+<!--    <bean id="movie" class="com.stackroute.domain.Movie">-->
+<!--        <constructor-arg name="actor" ref="actor"></constructor-arg>-->
+<!--        <constructor-arg name="actress" ref="actress"></constructor-arg>-->
+<!--        <constructor-arg name="sidekick" ref="sidekick"></constructor-arg>-->
+<!--    </bean>-->
+
+<!--    <bean name="movieA,movieB" class="com.stackroute.domain.Movie" scope="prototype">-->
+<!--        <constructor-arg name="actor" ref="actor"></constructor-arg>-->
+<!--        <constructor-arg name="actress" ref="actress"></constructor-arg>-->
+<!--        <constructor-arg name="sidekick" ref="sidekick"></constructor-arg>-->
+<!--    </bean>-->
+
+    <bean id="movie" scope="prototype" class="com.stackroute.domain.Movie" autowire="byName">
     </bean>
 
-    <bean name="movieA,movieB" class="com.stackroute.domain.Movie" scope="prototype">
-        <constructor-arg name="actor" ref="actor"></constructor-arg>
-        <constructor-arg name="actress" ref="actress"></constructor-arg>
-        <constructor-arg name="sidekick" ref="sidekick"></constructor-arg>
+    <bean id="movie1" scope="prototype" class="com.stackroute.domain.Movie" autowire="constructor">
     </bean>
 
 </beans>
