@@ -9,7 +9,7 @@ import org.springframework.context.ApplicationContextAware;
 
 public class Movie implements BeanFactoryAware, ApplicationContextAware, BeanNameAware {
 
-    Actor actor, actress, sidekick;
+    private Actor actor, actress, sidekick;
 
     public Movie(){
 
@@ -44,16 +44,16 @@ public class Movie implements BeanFactoryAware, ApplicationContextAware, BeanNam
 
     @Override
     public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
-        System.out.println("Bean Factory : "+beanFactory);
+        System.out.println("Bean Factory : "+ beanFactory);
     }
 
     @Override
     public void setBeanName(String s) {
-        System.out.println("Bean Name : "+s);
+        System.out.println("Bean Name : "+ s);
     }
 
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-        System.out.println("Application : "+applicationContext);
+        System.out.println("Application : "+ applicationContext);
     }
 }

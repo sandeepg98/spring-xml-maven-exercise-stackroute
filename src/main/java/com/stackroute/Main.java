@@ -2,6 +2,7 @@ package com.stackroute;
 
 import com.stackroute.domain.Movie;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 //import org.springframework.core.io.ClassPathResource;
 //import org.springframework.beans.factory.support.BeanDefinitionRegistry;
@@ -27,12 +28,14 @@ public class Main {
 //        System.out.println(movie1);
 
         //Using ApplicationContext
-        ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+        AbstractApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
         Movie movie = context.getBean("movie", Movie.class);
         System.out.println(movie);
 
         Movie movie1 = context.getBean("movie1", Movie.class);
         System.out.println(movie1);
+
+        context.registerShutdownHook();
 
 //        //Equality result of two movie beans
 //        Movie movieA = context.getBean("movieA", Movie.class);
